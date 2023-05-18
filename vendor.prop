@@ -97,7 +97,9 @@ ro.config.vc_call_vol_steps=6
 vendor.audio.adm.buffering.ms=6
 
 # Bluetooth
-vendor.qcom.bluetooth.soc=cherokee
+vendor.qcom.bluetooth.soc=cherokee 
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 
 # Camera
 persist.vendor.camera.preview.ubwc=0
@@ -137,6 +139,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
+# HEH filename encryption is being dropped
+ro.crypto.volume.filenames_mode=aes-256-cts
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1 
@@ -164,6 +169,7 @@ persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.mt_sms_ack=30
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
+ro.telephony.block_binder_thread_on_incoming_calls=false
 ro.telephony.default_network=22,22
 ro.vendor.use_data_netmgrd=true
 
